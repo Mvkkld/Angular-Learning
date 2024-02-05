@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  ng-app lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular</title>
+    <script src="angularjs.js"></script>
+    <style>
+        .name{text-align: center;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: brown;
+        text-decoration: underline;
+        }
+        p>h1{
+            font-size: 40px;
+        }
+        body{
+            background-color: {{hellow}};
+        }
+        span{
+            font-size: {{size}}px;
+        }
+        h2{
+            color: red;
+            text-align: center;
+        }
+        h3{
+            text-transform: capitalize;
+            color: darkblue;
+            text-decoration: underline;
+        }
+    </style>    
+</head>
+    
+<body>
+    
+    <p><h1>Welcome to angular js</h1></p>
+    {{5+6}} <br>
+    <h1>{{2+3}}</h1><hr>
+   
+    {{"Allah"+" "+"Madad"}} <br>
+    {{"Muhammad"+" "+"Mustafa(s.a.w.w)"}} <br>
+     <input type="text" placeholder="Enter The Color Name" ng-model="hellow"><br>
+    <input type="text" placeholder="User Name" ng-model="name">
+    <br>
+    <div class="name">{{name}}</div>
+
+    <input type="text" placeholder="set size (1-100)" ng-model="size"><br>
+    <span>Pakistan Zindabad</span>
+    <br>
+    <textarea ng-model="txt" cols="30" rows="10"></textarea>
+    <h2 ng-bind="txt"></h2>
+    <select ng-model="list">
+        <option value="Ali">Ali</option>
+        <option value="Zubair">Zubair</option>
+        <option value="Nabi">Nabi</option>
+    </select>
+    <h3 ng-bind="list"></h3>
+</body>
+</html>
